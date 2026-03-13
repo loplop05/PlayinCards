@@ -1,113 +1,101 @@
-Blackjack Game (Python)
+# Blackjack Game (Python)
 
-A simple Blackjack card game implemented in Python using Object-Oriented Programming (OOP) concepts.
+A simple **Blackjack card game** implemented in Python using **Object-Oriented Programming (OOP)** concepts.
 
-The goal of the game is to get as close to 21 as possible without going over. The player competes against the dealer following the classic Blackjack rules.
+The goal of the game is to get as close to **21** as possible without going over. The player competes against the dealer following the classic Blackjack rules.
 
-Features
+---
 
-Standard 52-card deck
+## Features
 
-Card, Deck, Hand, and Chips classes
+- Standard **52-card deck**
+- **Card, Deck, Hand, and Chips classes**
+- Random **deck shuffling**
+- **Hit or Stand** gameplay
+- **Ace value adjustment** (1 or 11)
+- Player betting system with chips
+- Dealer automatically plays until reaching **17**
+- Replay option after each round
 
-Random deck shuffling
+---
 
-Hit or Stand gameplay
+## Technologies Used
 
-Ace value adjustment (1 or 11)
+- Python
+- Object-Oriented Programming (OOP)
+- `random` module
 
-Player betting system with chips
+---
 
-Dealer automatically plays until reaching 17
-
-Replay option after each round
-
-Technologies Used
-
-Python
-
-Object-Oriented Programming (OOP)
-
-Random module
-
-Project Structure
+## Project Structure
 
 The game is built using several classes:
 
-Card
-
+### Card
 Represents a single playing card.
 
 Attributes:
+- `suit`
+- `rank`
 
-suit
+---
 
-rank
-
-Deck
-
+### Deck
 Represents a full deck of cards.
 
 Methods:
+- `shuffle()` → randomizes the deck
+- `deal()` → deals a card from the deck
 
-shuffle() → randomizes the deck
+---
 
-deal() → deals a card from the deck
-
-Hand
-
+### Hand
 Represents the cards held by a player or dealer.
 
 Attributes:
-
-cards
-
-value
-
-aces
+- `cards`
+- `value`
+- `aces`
 
 Methods:
+- `add_card()`
+- `adjust_for_ace()`
 
-add_card()
+---
 
-adjust_for_ace()
-
-Chips
-
+### Chips
 Represents the player's betting chips.
 
 Attributes:
-
-total
-
-bet
+- `total`
+- `bet`
 
 Methods:
+- `win_bet()`
+- `lose_bet()`
 
-win_bet()
+---
 
-lose_bet()
+## Game Rules
 
-Game Rules
+1. Each player receives **two cards**.
+2. One of the dealer’s cards remains **hidden**.
+3. The player can choose:
+   - **Hit** → take another card
+   - **Stand** → keep current cards
+4. If the player's total exceeds **21**, the player **busts**.
+5. The dealer must hit until reaching **17 or higher**.
+6. The highest value **≤ 21** wins.
 
-Each player receives two cards.
+### Ace Values
+- **11 by default**
+- Automatically converts to **1 if needed** to prevent busting.
 
-One of the dealer’s cards remains hidden.
+---
 
-The player can choose:
+## How to Run
 
-Hit → take another card
+### 1. Clone the repository
 
-Stand → keep current cards
-
-If the player's total exceeds 21, the player busts.
-
-The dealer must hit until reaching 17 or higher.
-
-The highest value ≤ 21 wins.
-
-Ace values:
-
-11 by default
-
-Automatically converts to 1 if needed to prevent busting.
+```bash
+git clone https://github.com/yourusername/blackjack-python.git
